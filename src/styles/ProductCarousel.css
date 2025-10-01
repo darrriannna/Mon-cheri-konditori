@@ -1,0 +1,113 @@
+.carousel-section {
+    background: #7a1f1f;
+    /* deep red */
+    padding: 60px 30px;
+    text-align: center;
+    color: #fdf5f0;
+}
+
+.carousel-title {
+    font-family: 'Georgia', serif;
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.carousel-subtitle {
+    font-size: 16px;
+    margin-bottom: 40px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.5;
+}
+
+/* Carousel container */
+.carousel-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.carousel {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+.carousel::-webkit-scrollbar {
+    display: none;
+    /* Chrome, Safari */
+}
+
+.product-card {
+    background: transparent;
+    min-width: 220px;
+    flex: 0 0 auto;
+    text-align: left;
+}
+
+.product-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.product-card h3 {
+    font-family: 'Georgia', serif;
+    font-size: 20px;
+    color: #e6d2c0;
+    margin-bottom: 5px;
+}
+
+.product-card .ingredients {
+    font-size: 14px;
+    color: #e6d2c0;
+    line-height: 1.4;
+}
+
+/* Arrows */
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.6);
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 50%;
+    z-index: 5;
+}
+
+.arrow.left {
+    left: -10px;
+}
+
+.arrow.right {
+    right: -10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .carousel-title {
+        font-size: 26px;
+    }
+
+    .carousel-subtitle {
+        font-size: 14px;
+        padding: 0 10px;
+    }
+
+    .product-card {
+        min-width: 160px;
+    }
+
+    .arrow {
+        display: none;
+        /* hide arrows on small screens */
+    }
+}

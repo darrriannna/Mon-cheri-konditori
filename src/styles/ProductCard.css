@@ -1,0 +1,107 @@
+.product-card {
+    display: flex;
+    gap: 40px;
+    padding: 40px;
+    background-color: #FFFFF2;
+    /* light beige background */
+}
+
+.product-image img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 6px;
+    object-fit: cover;
+}
+
+.product-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.tag {
+    font-size: 14px;
+    font-weight: bold;
+    color: #a62c2c;
+    text-transform: uppercase;
+}
+
+.title {
+    font-family: 'Georgia', serif;
+    font-size: 32px;
+    color: #5b2c2c;
+}
+
+.desc {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+}
+
+.warning {
+    color: #a62c2c;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.price {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #a62c2c;
+}
+
+.allergen {
+    color: #a62c2c;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #ccc;
+    padding: 10px 0;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.plus {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+
+.order-btn {
+    margin-top: 15px;
+    background-color: #c5ad97;
+    color: #a62c2c;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: background 0.3s ease;
+}
+
+.order-btn:hover {
+    background-color: #b69a82;
+}
+
+/* Responsive layout */
+@media (max-width: 900px) {
+    .product-card {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .product-image img {
+        max-width: 100%;
+    }
+
+    .title {
+        font-size: 26px;
+    }
+
+    .desc {
+        font-size: 14px;
+    }
+}
