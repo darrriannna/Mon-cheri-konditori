@@ -1,0 +1,102 @@
+.about-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6rem;
+    /* Increased gap between image group and text */
+    padding: 5rem 3rem;
+    background-color: #fdfdfb;
+    flex-wrap: wrap;
+}
+
+/* Image wrapper now behaves as a fixed composite container */
+.about-image-wrapper {
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Group keeps text+whisk perfectly aligned */
+.image-group {
+    position: relative;
+    width: 320px;
+    height: 320px;
+}
+
+/* Rotating circular text */
+.rotating-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    animation: rotate 20s linear infinite;
+    z-index: 1;
+}
+
+/* Whisk centered inside */
+.whisk-img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 60%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+/* Text */
+.about-content {
+    max-width: 520px;
+}
+
+.about-content h2 {
+    color: #a3001b;
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.about-content p {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #333;
+}
+
+/* Rotation animation */
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Mobile layout */
+@media (max-width: 768px) {
+    .about-section {
+        flex-direction: column;
+        gap: 2.5rem;
+        /* smaller vertical gap */
+        text-align: center;
+    }
+
+    .image-group {
+        width: 240px;
+        height: 240px;
+    }
+
+    .about-content {
+        max-width: 90%;
+    }
+
+    .about-content h2 {
+        font-size: 1.6rem;
+    }
+
+    .about-content p {
+        font-size: 0.95rem;
+    }
+}

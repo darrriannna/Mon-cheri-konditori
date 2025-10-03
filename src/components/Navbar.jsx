@@ -9,8 +9,6 @@ const Navbar = () => {
             {/* Left side: links */}
             <ul className={`nav-links ${menuOpen ? "open" : ""}`}>
                 <li><a href="#">Hem</a></li>
-                <li><a href="#">Kalas</a></li>
-                <li><a href="#">Bröllop</a></li>
                 <li><a href="#">Företag</a></li>
                 <li><a href="#">Kontakt</a></li>
             </ul>

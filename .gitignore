@@ -12,9 +12,9 @@ node_modules/
 # Build folders
 build/
 dist/
-
+.vite/
 # OS & editor files
-.DS_Store
+.DS_Storegit 
 .vscode/
 .idea/
 
