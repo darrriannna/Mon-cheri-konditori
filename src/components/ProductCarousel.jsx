@@ -16,7 +16,7 @@ const ProductGrid = () => (
             {products.map((product) => (
                 <div className="grid-item" key={product.id}>
                     <img src={product.img} alt={product.name} />
-                    <h3>{product.name}</h3>
+                    <h3 className="title-dessert">{product.name}</h3>
                     <p className="ingredients">{product.ingredients}</p>
                     <p className="price">{product.price}</p>
                 </div>

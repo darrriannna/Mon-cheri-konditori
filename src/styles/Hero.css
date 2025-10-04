@@ -24,6 +24,10 @@
     font-size: 20px;
 }
 
+.btn-hero-link {
+    color: #fffdf8;
+}
+
 .hero-text-box {
     position: absolute;
     top: 30%;

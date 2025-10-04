@@ -19,7 +19,7 @@ const Hero = () => {
                         Just nu erbjuder vi endast avhämtning, men med din kärlek till våra desserter hoppas vi kunna växa och skapa ännu fler söta stunder tillsammans framöver.
                     </p>
                     <div className="btn-hero">
-                        <Link to="/bestalla">
+                        <Link className="btn-hero-link" to="/bestalla">
                             <button className="order-btn-hero">Beställ här</button>
                         </Link></div>
                 </div>
