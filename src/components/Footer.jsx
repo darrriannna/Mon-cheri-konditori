@@ -1,16 +1,12 @@
 import React from "react";
 import "../styles/Footer.css";
+import { FaInstagram, FaFacebook } from "react-icons/fa";
+
 import splashImage from "/assets/footer.png"; // replace with your PNG file path
 
 export default function Footer() {
     return (
         <footer className="footer">
-            {/* Running text line */}
-            <div className="footer-marquee">
-                <div className="marquee-text">
-                    FIKA AS A WAY OF LIFE • FIKA AS A WAY OF LIFE • FIKA AS A WAY OF LIFE •
-                </div>
-            </div>
 
             {/* Content */}
             <div className="footer-container">
@@ -39,8 +35,8 @@ export default function Footer() {
                 <div className="footer-column">
                     <h3 className="footer-title">Följ oss</h3>
                     <div className="social-icons">
-                        <a href="#" aria-label="Instagram">📷</a>
-                        <a href="#" aria-label="Facebook">📘</a>
+                        <a href="#" aria-label="Instagram"><FaInstagram size={24} /></a>
+                        <a href="#" aria-label="Facebook"><FaFacebook size={24} /></a>
                     </div>
                 </div>
             </div>

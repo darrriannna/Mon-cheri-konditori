@@ -1,0 +1,427 @@
+:root {
+    --bg: #f4f1ea;
+    /* page background */
+    --card: #fbf9f6;
+    /* card background */
+    --muted: #cfc7bd;
+    --text: #312f2a;
+    --accent: #b8a68b;
+    --dark: #262423;
+}
+
+
+/* page-level centering */
+.order-page {
+    background: var(--bg);
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding: 48px 20px;
+    box-sizing: border-box;
+}
+
+/* wrapper constrains width so the whole block is centered */
+.order-wrapper {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* header and banner */
+.order-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 18px;
+}
+
+.back-link {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: none;
+    border: none;
+    color: var(--dark);
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.order-title {
+    font-size: 22px;
+    color: var(--text);
+    margin: 0;
+}
+
+.banner {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 18px;
+}
+
+.banner-inner {
+    background: var(--card);
+    padding: 18px 24px;
+    border-radius: 8px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+    font-weight: 600;
+    color: var(--dark);
+}
+
+/* overall white card */
+.booking-card {
+    width: 100%;
+
+    max-width: 900px;
+    /* ✅ same width for all steps */
+    margin: 0 auto 22px auto;
+    background: var(--card);
+    border-radius: 12px;
+    padding: 22px;
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.07);
+    margin-bottom: 22px;
+    box-sizing: border-box;
+}
+
+
+/* two-column layout: calendar left, times right */
+.booking-layout {
+    display: grid;
+    grid-template-columns: 1fr 380px;
+    gap: 26px;
+    align-items: start;
+}
+
+/* calendar panel (white inner) */
+.calendar-panel {
+    background: #fff;
+    padding: 18px;
+    border-radius: 8px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.04);
+}
+
+/* month nav */
+.month-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+
+.month-nav button {
+    background: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    color: var(--text);
+}
+
+.month-label {
+    font-weight: 700;
+    font-size: 15px;
+    color: var(--text);
+}
+
+/* weekday row / month grid */
+.weekday-row {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 6px;
+    margin-bottom: 8px;
+    color: #7a766e;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-align: center;
+    font-size: 12px;
+}
+
+.month-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+}
+
+/* day tile styles */
+.day-tile {
+    width: 48px;
+    height: 48px;
+    border-radius: 24px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #8b857b;
+    background: transparent;
+    transition: all 120ms ease;
+}
+
+.day-tile:hover {
+    background: #f2ebe3;
+    color: var(--dark);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.04);
+}
+
+.day-tile.selected {
+    background: var(--dark);
+    color: #fff;
+    font-weight: 700;
+    box-shadow: none;
+}
+
+.day-tile.muted {
+    color: #e0dbd6;
+    cursor: default;
+    background: transparent;
+}
+
+.day-tile.disabled {
+    color: #dad3cc;
+    background: #faf8f6;
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* time panel */
+.time-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.time-header {
+    margin-bottom: 4px;
+}
+
+.selected-day {
+    font-weight: 700;
+    color: var(--text);
+}
+
+.timezone {
+    font-size: 11px;
+    color: #91887f;
+    letter-spacing: 0.6px;
+}
+
+/* timeslots */
+.timeslots {
+    margin-top: 12px;
+}
+
+.timeslots h3 {
+    margin: 6px 0 10px 0;
+    font-size: 14px;
+    color: var(--text);
+}
+
+.timeslot-grid {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.timeslot {
+    padding: 10px 14px;
+    border-radius: 8px;
+    border: 1px solid #e6dfd7;
+    background: #fff;
+    cursor: pointer;
+    font-weight: 700;
+    transition: all 120ms;
+    color: #262423;
+}
+
+.timeslot:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.06);
+}
+
+.timeslot.selected {
+    background: var(--accent);
+    color: white;
+    border-color: var(--accent);
+    box-shadow: none;
+}
+
+.timeslot[disabled] {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* CTA row */
+.cta-row {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: auto;
+}
+
+.btn-primary {
+    background: var(--dark);
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.btn-primary[disabled] {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* form card (step 2) */
+.form-card {
+    background: #fff;
+    padding: 22px;
+    border-radius: 8px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.04);
+
+}
+
+.form-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.form-title {
+    font-size: 12px;
+    font-weight: 700;
+    color: #83766a;
+    letter-spacing: 1px;
+}
+
+.chosen .bold {
+    font-weight: 700;
+    color: var(--text);
+}
+
+/* form fields */
+.form-fields label {
+    display: block;
+    margin-bottom: 12px;
+    color: var(--text);
+    font-weight: 600;
+}
+
+.underlined input {
+    width: 100%;
+    padding: 8px 6px;
+    border: none;
+    border-bottom: 1px solid #e6dfd7;
+    font-size: 15px;
+    background: transparent;
+    outline: none;
+}
+
+textarea {
+    width: 100%;
+    min-height: 90px;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #e6dfd7;
+}
+
+/* product row */
+.product-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.product-name {
+    font-weight: 700;
+    color: var(--text);
+}
+
+.qty select {
+    width: 50px;
+    height: 30px;
+    padding: 5px;
+    border-radius: 6px;
+    border: 1px solid #e6dfd7;
+    font-weight: 700;
+}
+
+/* form actions */
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 14px;
+}
+
+.btn-secondary {
+    background: #e6e1dc;
+    border: none;
+    padding: 10px 14px;
+    border-radius: 8px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+/* confirmation */
+.confirm-card {
+    text-align: center;
+}
+
+.medel {
+    background-color: #fdfdfd;
+    color: #262423;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1000px) {
+    .booking-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .time-panel {
+        order: 2;
+        width: 100%;
+    }
+
+    .calendar-panel {
+        order: 1;
+    }
+
+    .month-grid {
+        gap: 8px;
+    }
+
+    .day-tile {
+        width: 40px;
+        height: 40px;
+    }
+
+    .cta-row {
+        justify-content: flex-end;
+    }
+}
+
+@media (max-width: 540px) {
+    .order-page {
+        padding: 18px 12px;
+    }
+
+    .day-tile {
+        width: 34px;
+        height: 34px;
+    }
+
+    .month-nav .month-label {
+        font-size: 14px;
+    }
+
+    .cta-row {
+        justify-content: center;
+    }
+}

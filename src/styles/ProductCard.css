@@ -1,8 +1,9 @@
 .product-card {
     display: flex;
+    height: 100%;
     gap: 40px;
     padding: 40px;
-    background-color: #FFFFF2;
+    background-color: #fffdf8;
     /* light beige background */
 }
 
@@ -45,7 +46,7 @@
     margin-top: 10px;
 }
 
-.price {
+.price-card {
     font-size: 20px;
     font-weight: bold;
     margin-top: 10px;
@@ -91,6 +92,7 @@
     .product-card {
         flex-direction: column;
         padding: 20px;
+
     }
 
     .product-image img {
@@ -103,5 +105,36 @@
 
     .desc {
         font-size: 14px;
+    }
+}
+
+.allergen-list {
+    margin-top: 10px;
+    font-size: 14px;
+    line-height: 1.4;
+    color: #333;
+    padding-left: 5px;
+}
+
+.order-btn {
+    margin-top: auto;
+    /* ensures button stays at bottom */
+    align-self: flex-start;
+    /* button stays visible on small screens */
+    background-color: #c5ad97;
+    color: #a62c2c;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: background 0.3s ease;
+}
+
+@media (max-width: 900px) {
+    .order-btn {
+        width: 100%;
+        /* full width on small screens */
+        text-align: center;
     }
 }

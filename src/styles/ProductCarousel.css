@@ -1,6 +1,5 @@
 .grid-section {
     background-color: #740c0c;
-
     font-size: 22px;
     text-align: center;
 }
@@ -14,7 +13,7 @@
 }
 
 .grid-item {
-    width: 250px;
+    width: 280px;
     text-align: center;
 
     padding: 10px;

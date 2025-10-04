@@ -20,8 +20,8 @@
 /* Group keeps text+whisk perfectly aligned */
 .image-group {
     position: relative;
-    width: 320px;
-    height: 320px;
+    width: 380px;
+    height: 380px;
 }
 
 /* Rotating circular text */

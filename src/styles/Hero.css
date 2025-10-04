@@ -10,12 +10,26 @@
     object-fit: cover;
 }
 
+.welcome-text {
+    font-family: "La Belle Aurore", cursive;
+    font-weight: 400;
+    font-style: normal;
+    color: #7b2d2d;
+    font-size: 30px;
+}
+
+.order-btn-hero {
+    background-color: #7b2d2d;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
 .hero-text-box {
     position: absolute;
     top: 30%;
     left: 10%;
     max-width: 450px;
-    background-color: #f9ebe6;
+    background-color: #fffdf8;
     padding: 20px;
     border-radius: 5px;
     color: #7b2d2d;
