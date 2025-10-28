@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "../styles/ProductCard.css";
-import productImage from "/assets/mix-fruit.jpeg"; // replace with your own image
+import productImage from "/assets/Desserts.png"; // replace with your own image
 
 const ProductCard = () => {
     const [showAllergens, setShowAllergens] = useState(false);
@@ -18,25 +18,27 @@ const ProductCard = () => {
             {/* Image */}
             <div className="product-image">
                 <img src={productImage} alt="Trompe-l’œil" />
+
             </div>
 
             {/* Text Content */}
             <div className="product-info">
-                <h2 className="title">Frukt mix box</h2>
+                <h2 className="title">trompe l’oeil</h2>
                 <p className="desc">
-                    Vår bakelsebox består av fyra unika smaker: citron, hallon, passionfrukt och mango.
+                    Vår bakelsebox består av fyra eller sex unika smaker: lime, hallon, passionfrukt, mango, äpple, blåbar.
                 </p>
 
-                <p className="desc"><strong>Citronbakelsen</strong> en frisk lemoncurd omsluten av len och syrlig citronmousse. </p>
-                <p className="desc"><strong>Hallonbakelsen</strong> fylld med hallonkompott på en saftig hallonblondie, täckt av en fräsch hallonmousse. </p>
-                <p className="desc"><strong>Passionsfruktsbakelsen</strong> en tropisk dröm med passionsfruktskräm och mousse som balanserar sötma och syra perfekt.</p>
-                <p className="desc"><strong>Mangobakelsen</strong> en len mangomousse med vaniljbotten och bitar av solmogen mango för en extra fruktig upplevelse.</p>
+                <p className="desc"><strong>Limebakelsen</strong> en frisk och syrlig bakelse med len limecurd och luftig citronmousse, täckt med belgisk choklad blandad med naturligt kakaosmör.</p>
+                <p className="desc"><strong>Hallonbakelsen</strong> fylld med hallonkompott och fräsch hallonmousse, täckt med belgisk choklad blandad med naturligt kakaosmör.</p>
+                <p className="desc"><strong>Passionsfruktsbakelsen</strong> en tropisk dröm med passionsfruktskräm och mousse som balanserar sötma och syra perfekt, täckt med belgisk choklad blandad med naturligt kakaosmör.</p>
+                <p className="desc"><strong>Mangobakelsen</strong> en len mangomousse med bitar av solmogen mango för en extra fruktig upplevelse, täckt med belgisk choklad blandad med naturligt kakaosmör.</p>
+                <p className="desc"><strong>Blåbarbakelsen</strong> fylld med blåbärskompott och luftig blåbärsmousse för en frisk och bärig smak, täckt med belgisk choklad blandad med naturligt kakaosmör.</p>
+                <p className="desc"><strong>Äpplebakelsen</strong> en saftig bakelse med äppelkompott och kryddig mousse, toppad med lätt syrlig äppelkräm och täckt med belgisk choklad blandad med naturligt kakaosmör.</p>
 
                 <p className="warning">
                     Måste beställas i förväg. Upphämtningsdagar är måndagar, onsdagar och fredagar.
                 </p>
 
-                <p className="price-card">350kr</p>
 
                 {/* Allergener toggle */}
                 <div

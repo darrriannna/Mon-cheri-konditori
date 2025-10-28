@@ -1,0 +1,168 @@
+.fest-container {
+    max-width: 100%;
+
+    margin: 0 auto;
+    padding: 4rem 2rem;
+    font-family: "Arial", sans-serif;
+    color: #000;
+    background: #fdfdfb;
+}
+
+.fest-wrapper {
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* ---------- Lemon Love Cakes ---------- */
+.lemon-container {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 5rem;
+    text-align: left;
+}
+
+.lemon-text {
+    width: 50%;
+}
+
+.lemon-title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #a3001b;
+}
+
+.lemon-desc {
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+.lemon-img {
+    width: 40%;
+    height: auto;
+
+    object-fit: cover;
+}
+
+/* ---------- Mousee Bento-tårta ---------- */
+.bento-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    margin-bottom: 5rem;
+    text-align: left;
+
+}
+
+.bento-text {
+    width: 50%;
+}
+
+.bento-title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #a3001b;
+}
+
+.bento-desc {
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+.bento-img {
+    width: 40%;
+    height: auto;
+
+    object-fit: cover;
+}
+
+/* ---------- Medovyk ---------- */
+.medovyk-container {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 5rem;
+    text-align: left;
+}
+
+.medovyk-text {
+    width: 50%;
+}
+
+.medovyk-title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #a3001b;
+}
+
+.medovyk-desc {
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+.medovyk-img {
+    width: 40%;
+    height: auto;
+
+    object-fit: cover;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+
+    .lemon-container,
+    .bento-container,
+    .medovyk-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .lemon-text,
+    .bento-text,
+    .medovyk-text {
+        width: 100%;
+        margin-bottom: 1.5rem;
+    }
+
+    .lemon-img,
+    .bento-img,
+    .medovyk-img {
+        width: 100%;
+    }
+}
+
+/* Smooth fade-up look for text */
+.lemon-title,
+.bento-title,
+.medovyk-title {
+    transition: color 0.3s ease;
+}
+
+.lemon-title:hover,
+.bento-title:hover,
+.medovyk-title:hover {
+    color: #680a0a;
+}
+
+/* Add subtle zoom and shadow on hover */
+.lemon-img,
+.bento-img,
+.medovyk-img {
+    transition: transform 0.6s ease, box-shadow 0.6s ease;
+    will-change: transform;
+}
+
+.lemon-img:hover,
+.bento-img:hover,
+.medovyk-img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
+}

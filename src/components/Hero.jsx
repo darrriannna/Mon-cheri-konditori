@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "../styles/Hero.css";
-import pastries from "/assets/Pasteries.jpg"; // <- Replace with your actual image
+import pastries from "/assets/banner.jpg"; // <- Replace with your actual image
 
 const Hero = () => {
     return (

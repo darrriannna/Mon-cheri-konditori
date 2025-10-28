@@ -1,0 +1,83 @@
+/* Section layout */
+.contact-section {
+    background-color: #fff;
+    text-align: center;
+    padding: 4rem 1.5rem;
+}
+
+/* Heading */
+.contact-section h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: #111;
+}
+
+/* Form layout */
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* Inputs & Textarea */
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #facc15;
+    /* yellow tone */
+    box-shadow: 0 0 0 3px rgba(250, 204, 21, 0.2);
+    outline: none;
+}
+
+/* Textarea */
+.contact-form textarea {
+    min-height: 8rem;
+    resize: vertical;
+}
+
+/* Submit Button */
+.contact-form button {
+    background-color: #facc15;
+    /* yellow */
+    color: #fff;
+    border: none;
+    padding: 0.75rem 2rem;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.contact-form button:hover {
+    background-color: #eab308;
+    /* darker yellow */
+    transform: translateY(-1px);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .contact-section h2 {
+        font-size: 1.6rem;
+    }
+
+    .contact-form {
+        gap: 0.8rem;
+    }
+
+    .contact-form button {
+        width: 100%;
+    }
+}
