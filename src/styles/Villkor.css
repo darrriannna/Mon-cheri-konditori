@@ -1,6 +1,11 @@
-.villkor {
-    width: 100%;
+.villkor-wrapper {
     background-color: #fffdf8;
+}
+
+.villkor {
+    width: 80%;
+    margin: auto;
+
 }
 
 .info-grid {

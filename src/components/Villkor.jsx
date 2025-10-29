@@ -46,20 +46,21 @@ const infoData = [
 
 export default function InfoGrid() {
     return (
-        <div className="villkor">
-            <section className="info-grid">
-                {infoData.map((item, index) => (
-                    <div key={index} className="info-card">
-                        {/* Title row with icon and heading */}
-                        <div className="title-row">
-                            <img src={item.icon} alt={item.title} className="icon" />
-                            <h3>{item.title}</h3>
+        <div className="villkor-wrapper">
+            <div className="villkor">
+                <section className="info-grid">
+                    {infoData.map((item, index) => (
+                        <div key={index} className="info-card">
+                            {/* Title row with icon and heading */}
+                            <div className="title-row">
+                                <img src={item.icon} alt={item.title} className="icon" />
+                                <h3>{item.title}</h3>
+                            </div>
+                            {/* Text block */}
+                            <div className="text">{item.text}</div>
                         </div>
-                        {/* Text block */}
-                        <div className="text">{item.text}</div>
-                    </div>
-                ))}
-            </section></div>
+                    ))}
+                </section></div></div>
     );
 }
 

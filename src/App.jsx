@@ -28,7 +28,6 @@ function App() {
               <Navbar />
               <section id="home"><Hero /></section>
               <section id="card"><ProductCard /></section>
-              <section id="villkor"><Boxes /></section>
               <section id="villkor"><InfoGrid /></section>
               <section id="carousel"><ProductCarousel /></section>
               <section id="desserts"><DessertShowcase /></section>

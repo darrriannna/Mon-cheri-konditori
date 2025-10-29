@@ -1,17 +1,16 @@
-/* GiftBoxes.css */
-
+/* Boxes.css */
 
 .gift-container {
-    background-color: #fdfdfb;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-direction: column;
+    /* stack boxes vertically */
     align-items: center;
-    gap: 4rem;
-    padding: 2rem 1rem;
+    justify-content: flex-start;
+    gap: 2rem;
+    padding: 0;
+    /* no padding so it fits nicely beside text */
+    background: transparent;
     text-align: center;
-
-    animation: fadeIn 1.2s ease-in-out;
 }
 
 .gift-box {
@@ -23,63 +22,34 @@
 }
 
 .gift-box:hover {
-    transform: translateY(-10px) scale(1.05);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px) scale(1.03);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
 }
 
 .gift-image {
-    width: 260px;
+    width: 300px;
+    /* smaller so it fits beside text */
     height: auto;
-    padding: 0;
     transition: all 0.4s ease;
 }
 
-.gift-box:hover .gift-image {
-    filter: brightness(1.1);
-}
-
 .price-box {
-    color: brown;
+    color: #a62c2c;
     font-weight: 600;
-    font-size: 20px;
+    font-size: 18px;
+    margin-top: 8px;
 }
 
-
-
-/* Animations */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes fadeUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Responsive Layout */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
     .gift-container {
-        flex-direction: column;
-        gap: 3rem;
+        flex-direction: row;
+        /* show side-by-side below text on small screens */
+        justify-content: center;
+        gap: 1rem;
+        margin-top: 1rem;
     }
 
     .gift-image {
-        width: 80%;
-        max-width: 320px;
+        width: 140px;
     }
 }

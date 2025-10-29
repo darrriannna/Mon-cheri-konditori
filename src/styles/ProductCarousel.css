@@ -1,11 +1,18 @@
+.grid-carousel {
+    background-color: #fffdf8;
+}
+
 .grid-section {
-    background-color: #740c0c;
+
     text-align: center;
-    padding: 60px 20px;
+    padding: 20px;
+
+    margin: auto;
 }
 
 .title-products {
-    color: #fff;
+    font-family: 'Georgia', serif;
+    color: #5b2c2c;
     font-size: 2rem;
     margin-bottom: 30px;
     font-weight: 600;
@@ -15,17 +22,19 @@
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
+    max-width: 1000px;
+    margin: auto;
     justify-content: center;
 }
 
 .grid-item {
     width: 280px;
-    background: #8c1111;
+
     border-radius: 16px;
     text-align: center;
-    color: #fff;
+    color: black;
     padding: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -44,7 +53,7 @@
 .title-dessert,
 .ingredients,
 .price {
-    color: #FFFFF2;
+    color: #5b2c2c;
 }
 
 /* Responsive */
@@ -56,7 +65,7 @@
 
 @media (max-width: 600px) {
     .grid-item {
-        width: 90%;
+        width: 70%;
     }
 
     .grid-item img {

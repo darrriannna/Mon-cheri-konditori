@@ -11,8 +11,8 @@ const products = [
 ];
 
 const ProductGrid = () => (
-    <section className="grid-section">
-        <h2 className="title-products">Utforska vårt sortiment</h2>
+    <section className="grid-section grid-carousel">
+        <h2 className="title-products">Trompe l'oeil sortiment</h2>
         <div className="grid-container">
             {products.map((product) => (
                 <div className="grid-item" key={product.id}>
