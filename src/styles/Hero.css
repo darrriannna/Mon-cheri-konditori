@@ -1,6 +1,6 @@
 .hero {
     position: relative;
-    height: 80vh;
+    height: 90vh;
     overflow: hidden;
 }
 
@@ -22,6 +22,7 @@
     background-color: #7b2d2d;
     margin-bottom: 10px;
     font-size: 20px;
+    color: #fffdf8;
 }
 
 .btn-hero-link {
@@ -30,7 +31,7 @@
 
 .hero-text-box {
     position: absolute;
-    top: 50%;
+    top: 40%;
     left: 10%;
     max-width: 80%;
     padding: 20px;
